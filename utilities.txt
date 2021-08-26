@@ -1,0 +1,21 @@
+* List objects on a bucket
+aws s3api list-objects --bucket iaas-cf
+aws s3 ls iaas-cf
+
+* Sync folder with bucket
+aws s3 sync myfolder s3://mybucket/myfolder --exclude *.tmp
+aws s3 sync . s3://iaas-cf
+
+* Create bucket
+aws s3api create-bucket --bucket iaas-cf --region us-east-1
+aws s3 mb s3://bucket-name
+
+* List buckets
+aws s3 ls
+
+* Remove object from bucket
+aws s3 rm s3://iaas-cf/1-ec2-with-sg-elp.yaml
+aws s3 rm s3://cf-templates-su7hkpz4bccm-us-east-1/ --recursive
+
+* Delete Bucket
+aws s3 rb s3://cf-templates-su7hkpz4bccm-us-east-1
