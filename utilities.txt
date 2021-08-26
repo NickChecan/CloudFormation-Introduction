@@ -19,3 +19,6 @@ aws s3 rm s3://cf-templates-su7hkpz4bccm-us-east-1/ --recursive
 
 * Delete Bucket
 aws s3 rb s3://cf-templates-su7hkpz4bccm-us-east-1
+
+* Copy single files or folders to a S3 bucket
+aws s3 cp myfolder s3://mybucket/myfolder --recursive
